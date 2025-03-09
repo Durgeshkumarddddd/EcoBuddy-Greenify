@@ -1,0 +1,471 @@
+<% layout('layout/boilerplate') %>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #eafaf1;
+    }
+
+    .card {
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+      background-color: #28a745;
+      color: white;
+      border-radius: 15px 15px 0 0;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .progress {
+      height: 8px;
+      border-radius: 5px;
+    }
+
+    .badge-category {
+      font-size: 0.85rem;
+      padding: 5px 10px;
+      border-radius: 12px;
+    }
+
+    .badge-recycling {
+      background-color: #17a2b8;
+      color: white;
+    }
+
+    .badge-energy {
+      background-color: #ffc107;
+      color: black;
+    }
+
+    .badge-water {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .badge-plantation {
+      background-color: #20c997;
+      color: white;
+    }
+
+    .badge-cleanup {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .btn-add-task {
+      background-color: #218838;
+      color: white;
+      border-radius: 25px;
+    }
+  </style>
+
+  <div class="container my-5">
+    <div class="text-center mb-4">
+      <h1 class="fw-bold">EcoBuddy Project Tracker</h1>
+      <p class="text-muted">Track your progress on eco-friendly projects and stay organized!</p>
+      <button class="btn btn-add-task px-4 py-2">+ Add New Project</button>
+    </div>
+
+    <div class="row g-4">
+      <!-- Project 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h5>Recycling Awareness Campaign</h5>
+          </div>
+          <div class="card-body">
+            <p>Encourage communities to segregate waste and recycle efficiently.</p>
+            <span class="badge badge-category badge-recycling">Recycling</span>
+            <div class="mt-3">
+              <p>Progress:</p>
+              <div class="progress">
+                <div class="progress-bar bg-info" style="width: 75%;"></div>
+              </div>
+              <small class="text-muted">Deadline: 20th January 2025</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h5>Solar Panel Installation</h5>
+          </div>
+          <div class="card-body">
+            <p>Reduce carbon emissions by promoting solar energy.</p>
+            <span class="badge badge-category badge-energy">Energy Conservation</span>
+            <div class="mt-3">
+              <p>Progress:</p>
+              <div class="progress">
+                <div class="progress-bar bg-warning" style="width: 60%;"></div>
+              </div>
+              <small class="text-muted">Deadline: 15th February 2025</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h5>Water Conservation Drive</h5>
+          </div>
+          <div class="card-body">
+            <p>Organize workshops to teach water-saving techniques.</p>
+            <span class="badge badge-category badge-water">Water Conservation</span>
+            <div class="mt-3">
+              <p>Progress:</p>
+              <div class="progress">
+                <div class="progress-bar bg-primary" style="width: 45%;"></div>
+              </div>
+              <small class="text-muted">Deadline: 5th March 2025</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h5>Tree Plantation Drive</h5>
+          </div>
+          <div class="card-body">
+            <p>Plant 10,000 saplings in urban and rural areas.</p>
+            <span class="badge badge-category badge-plantation">Tree Plantation</span>
+            <div class="mt-3">
+              <p>Progress:</p>
+              <div class="progress">
+                <div class="progress-bar bg-success" style="width: 80%;"></div>
+              </div>
+              <small class="text-muted">Deadline: 10th February 2025</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h5>Beach Cleanup</h5>
+          </div>
+          <div class="card-body">
+            <p>Clean 5km of coastline to reduce ocean pollution.</p>
+            <span class="badge badge-category badge-cleanup">Cleanup</span>
+            <div class="mt-3">
+              <p>Progress:</p>
+              <div class="progress">
+                <div class="progress-bar bg-danger" style="width: 50%;"></div>
+              </div>
+              <small class="text-muted">Deadline: 30th January 2025</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h5>Community Composting Initiative</h5>
+          </div>
+          <div class="card-body">
+            <p>Promote composting to manage organic waste effectively.</p>
+            <span class="badge badge-category badge-recycling">Recycling</span>
+            <div class="mt-3">
+              <p>Progress:</p>
+              <div class="progress">
+                <div class="progress-bar bg-info" style="width: 40%;"></div>
+              </div>
+              <small class="text-muted">Deadline: 20th March 2025</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 7 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h5>Energy Efficient Home Program</h5>
+          </div>
+          <div class="card-body">
+            <p>Promote LED lights and energy-efficient appliances.</p>
+            <span class="badge badge-category badge-energy">Energy Conservation</span>
+            <div class="mt-3">
+              <p>Progress:</p>
+              <div class="progress">
+                <div class="progress-bar bg-warning" style="width: 70%;"></div>
+              </div>
+              <small class="text-muted">Deadline: 25th April 2025</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 8 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h5>Rainwater Harvesting Project</h5>
+          </div>
+          <div class="card-body">
+            <p>Build 50 rainwater harvesting units in rural areas.</p>
+            <span class="badge badge-category badge-water">Water Conservation</span>
+            <div class="mt-3">
+              <p>Progress:</p>
+              <div class="progress">
+                <div class="progress-bar bg-primary" style="width: 55%;"></div>
+              </div>
+              <small class="text-muted">Deadline: 15th May 2025</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 9 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h5>Plastic-Free School Initiative</h5>
+          </div>
+          <div class="card-body">
+            <p>Help schools eliminate single-use plastics.</p>
+            <span class="badge badge-category badge-recycling">Recycling</span>
+            <div class="mt-3">
+              <p>Progress:</p>
+              <div class="progress">
+                <div class="progress-bar bg-info" style="width: 35%;"></div>
+              </div>
+              <small class="text-muted">Deadline: 30th June 2025</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Project 11 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h5>Electric Vehicle Promotion</h5>
+          </div>
+          <div class="card-body">
+            <p>Raise awareness about the benefits of electric vehicles.</p>
+            <span class="badge badge-category badge-energy">Energy Conservation</span>
+            <div class="mt-3">
+              <p>Progress:</p>
+              <div class="progress">
+                <div class="progress-bar bg-warning" style="width: 50%;"></div>
+              </div>
+              <small class="text-muted">Deadline: 1st August 2025</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 12 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h5>Community Organic Farming</h5>
+          </div>
+          <div class="card-body">
+            <p>Encourage organic farming practices in local communities.</p>
+            <span class="badge badge-category badge-plantation">Tree Plantation</span>
+            <div class="mt-3">
+              <p>Progress:</p>
+              <div class="progress">
+                <div class="progress-bar bg-success" style="width: 40%;"></div>
+              </div>
+              <small class="text-muted">Deadline: 20th August 2025</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 13 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h5>E-Waste Collection Drive</h5>
+          </div>
+          <div class="card-body">
+            <p>Collect and recycle old electronics to reduce e-waste.</p>
+            <span class="badge badge-category badge-recycling">Recycling</span>
+            <div class="mt-3">
+              <p>Progress:</p>
+              <div class="progress">
+                <div class="progress-bar bg-info" style="width: 30%;"></div>
+              </div>
+              <small class="text-muted">Deadline: 15th September 2025</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 14 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h5>Eco-Friendly Packaging</h5>
+          </div>
+          <div class="card-body">
+            <p>Promote biodegradable packaging among local businesses.</p>
+            <span class="badge badge-category badge-cleanup">Cleanup</span>
+            <div class="mt-3">
+              <p>Progress:</p>
+              <div class="progress">
+                <div class="progress-bar bg-danger" style="width: 65%;"></div>
+              </div>
+              <small class="text-muted">Deadline: 10th October 2025</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 15 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h5>Forest Restoration Program</h5>
+          </div>
+          <div class="card-body">
+            <p>Replant trees in deforested areas to restore biodiversity.</p>
+            <span class="badge badge-category badge-plantation">Tree Plantation</span>
+            <div class="mt-3">
+              <p>Progress:</p>
+              <div class="progress">
+                <div class="progress-bar bg-success" style="width: 75%;"></div>
+              </div>
+              <small class="text-muted">Deadline: 5th November 2025</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 16 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h5>Carbon Footprint Calculator</h5>
+          </div>
+          <div class="card-body">
+            <p>Develop a tool to help individuals measure their carbon footprint.</p>
+            <span class="badge badge-category badge-energy">Energy Conservation</span>
+            <div class="mt-3">
+              <p>Progress:</p>
+              <div class="progress">
+                <div class="progress-bar bg-warning" style="width: 85%;"></div>
+              </div>
+              <small class="text-muted">Deadline: 30th November 2025</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 17 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h5>Green Schools Program</h5>
+          </div>
+          <div class="card-body">
+            <p>Promote eco-friendly practices in schools, such as energy conservation and waste management.</p>
+            <span class="badge badge-category badge-recycling">Recycling</span>
+            <div class="mt-3">
+              <p>Progress:</p>
+              <div class="progress">
+                <div class="progress-bar bg-info" style="width: 60%;"></div>
+              </div>
+              <small class="text-muted">Deadline: 10th December 2025</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 18 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h5>Urban Farming Initiative</h5>
+          </div>
+          <div class="card-body">
+            <p>Establish rooftop farms to grow fresh produce in urban areas.</p>
+            <span class="badge badge-category badge-plantation">Tree Plantation</span>
+            <div class="mt-3">
+              <p>Progress:</p>
+              <div class="progress">
+                <div class="progress-bar bg-success" style="width: 50%;"></div>
+              </div>
+              <small class="text-muted">Deadline: 15th January 2026</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 19 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h5>Sustainable Fashion Campaign</h5>
+          </div>
+          <div class="card-body">
+            <p>Encourage sustainable and ethical clothing practices.</p>
+            <span class="badge badge-category badge-cleanup">Cleanup</span>
+            <div class="mt-3">
+              <p>Progress:</p>
+              <div class="progress">
+                <div class="progress-bar bg-danger" style="width: 35%;"></div>
+              </div>
+              <small class="text-muted">Deadline: 1st February 2026</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 20 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h5>Zero Waste Challenge</h5>
+          </div>
+          <div class="card-body">
+            <p>Inspire individuals and businesses to reduce waste production.</p>
+            <span class="badge badge-category badge-recycling">Recycling</span>
+            <div class="mt-3">
+              <p>Progress:</p>
+              <div class="progress">
+                <div class="progress-bar bg-info" style="width: 40%;"></div>
+              </div>
+              <small class="text-muted">Deadline: 20th March 2026</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Project 10 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h5>Urban Green Spaces Development</h5>
+          </div>
+          <div class="card-body">
+            <p>Convert empty lots into public green spaces.</p>
+            <span class="badge badge-category badge-plantation">Tree Plantation</span>
+            <div class="mt-3">
+              <p>Progress:</p>
+              <div class="progress">
+                <div class="progress-bar bg-success" style="width: 65%;"></div>
+              </div>
+              <small class="text-muted">Deadline: 10th July 2025</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

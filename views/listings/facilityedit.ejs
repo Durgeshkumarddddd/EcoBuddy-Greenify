@@ -1,0 +1,86 @@
+<% layout('layout/boilerplate') %>
+  <div class="container mt-5 mb-4">
+    <h2 class="text-center mb-4 text-black">Facility Details</h2>
+    <form action="/facilitate/update/<%= facility._id %>" method="post"
+      class="shadow-lg p-4 rounded bg-gradient text-light">
+      <div class="mb-3">
+        <label for="title" class="form-label fw-bold">Facility Title</label>
+        <input id="title" name="Facillity_Title" type="text" class="form-control form-control-lg"
+          value="<%= facility.Facillity_Title %>" required>
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label fw-bold">Facility Description</label>
+        <textarea id="description" name="Facillity_Description" class="form-control form-control-lg" rows="4"
+          required><%= facility.Facillity_Description %></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="category" class="form-label fw-bold">Category</label>
+        <input id="category" name="Facillity_Category" type="text" class="form-control form-control-lg"
+          value="<%= facility.Facillity_Category %>" required>
+      </div>
+      <div class="mb-3">
+        <label for="address" class="form-label fw-bold">Address</label>
+        <input id="address" name="Facillity_Adderess" type="text" class="form-control form-control-lg"
+          value="<%= facility.Facillity_Adderess %>" required>
+      </div>
+      <div class="mb-3">
+        <label for="status" class="form-label fw-bold">Status</label>
+        <input id="status" name="Facillity_Status" type="text" class="form-control form-control-lg"
+          value="<%= facility.Facillity_Status %>" required>
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label fw-bold">Image URL</label>
+        <input id="image" name="Facillity_Image" type="text" class="form-control form-control-lg"
+          value="<%= facility.Facillity_Image %>" required>
+      </div>
+      <button class="btn btn-gradient btn-lg w-100" type="submit">Submit</button>
+    </form>
+  </div>
+
+  <style>
+    /* Gradient background for the form */
+    .bg-gradient {
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    }
+
+    /* Gradient button */
+    .btn-gradient {
+      background: linear-gradient(45deg, #ff416c, #ff4b2b);
+      border: none;
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    .btn-gradient:hover {
+      background: linear-gradient(45deg, #ff4b2b, #ff416c);
+      transform: translateY(-5px);
+    }
+
+    /* Heading and form text */
+    h2 {
+      font-family: 'Arial', sans-serif;
+      font-weight: 600;
+      color: black;
+    }
+
+    .mb-3 label {
+      color: black;
+    }
+
+    .form-label {
+      color: #f4f4f9;
+      font-size: 1.1rem;
+    }
+
+    .form-control {
+      border-radius: 8px;
+      box-shadow: none;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+
+    .form-control:focus {
+      border-color: #ff4b2b;
+      box-shadow: 0 0 10px rgba(255, 75, 43, 0.5);
+    }
+  </style>

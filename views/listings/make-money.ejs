@@ -1,0 +1,205 @@
+<% layout('layout/boilerplate') %>
+  <% layout('layout/boilerplate') %>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .hero-section {
+        background: url('https://media.istockphoto.com/id/2166336991/photo/gran-canyon-with-green-trees-in-chonburi-thailand-aerial-view-of-beautiful-old-mine-with-blue.webp?a=1&b=1&s=612x612&w=0&k=20&c=ws4Tjz8pHLPQkhCpGad1_uESi9_AlLQP8osd9uNiRPk=') center/cover no-repeat;
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+        background-size: cover;
+      }
+
+      .hero-section h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+      }
+
+      .hero-section p {
+        font-size: 1.2rem;
+        margin-top: 20px;
+      }
+
+      .feature-icon {
+        font-size: 3rem;
+        color: #4CAF50;
+      }
+
+      .cta-section {
+        background-color: #f8f9fa;
+        padding: 50px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .cta-section h3 {
+        font-weight: bold;
+        color: #333;
+      }
+
+      .cta-button {
+        background-color: #4CAF50;
+        color: white;
+        font-size: 1.2rem;
+        padding: 12px 30px;
+        border-radius: 5px;
+        text-transform: uppercase;
+        transition: background-color 0.3s;
+      }
+
+      .cta-button:hover {
+        background-color: #45a049;
+      }
+
+      .contact-details {
+        margin-top: 40px;
+      }
+
+      .contact-details a {
+        text-decoration: none;
+        color: #4CAF50;
+        font-weight: bold;
+      }
+
+      .stats-section {
+        background-color: #e8f5e9;
+        padding: 50px 0;
+        text-align: center;
+      }
+
+      .stats-section .stat-item {
+        font-size: 2rem;
+        color: #388e3c;
+        font-weight: bold;
+      }
+
+      .testimonials-section {
+        background-color: #fff;
+        padding: 50px 0;
+        text-align: center;
+        border-top: 2px solid #4CAF50;
+      }
+
+      .testimonial-card {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .testimonial-card p {
+        font-size: 1.2rem;
+        color: #555;
+      }
+
+      .testimonial-card h5 {
+        font-weight: bold;
+        color: #333;
+      }
+    </style>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <h1>Make Money with EcoBuddy</h1>
+        <p>Partner with EcoBuddy and grow your business sustainably. Join our partner program today!</p>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container my-5">
+      <div class="row text-center">
+        <div class="col-md-4">
+          <i class="fas fa-leaf feature-icon"></i>
+          <h3 class="mt-3">Sustainable Growth</h3>
+          <p>Build a greener future while generating income through eco-friendly partnerships.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-hands-helping feature-icon"></i>
+          <h3 class="mt-3">Collaborative Support</h3>
+          <p>Benefit from our expertise, resources, and a community of like-minded partners.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-chart-line feature-icon"></i>
+          <h3 class="mt-3">Profitable Opportunities</h3>
+          <p>Tap into diverse revenue streams through our partner program and marketplace.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="stat-item">100+ Partners</div>
+            <p>Join a growing network of eco-conscious businesses</p>
+          </div>
+          <div class="col-md-4">
+            <div class="stat-item">50% Revenue Growth</div>
+            <p>Experience significant revenue boosts through sustainable initiatives</p>
+          </div>
+          <div class="col-md-4">
+            <div class="stat-item">4,000+ Happy Customers</div>
+            <p>Reach a wide audience committed to sustainability</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+      <div class="container">
+        <h3>What Our Partners Say</h3>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <p>"EcoBuddy helped us grow our business while making a positive impact on the environment. Highly
+                recommend joining their program!"</p>
+              <h5>John Doe</h5>
+              <p>Founder of Green Solutions</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <p>"The support and resources from EcoBuddy are amazing. We've seen a significant increase in revenue and
+                brand recognition."</p>
+              <h5>Jane Smith</h5>
+              <p>CEO of EcoWare</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <p>"A fantastic opportunity for anyone looking to make a difference while earning. Their marketplace is
+                full of opportunities."</p>
+              <h5>Mark Johnson</h5>
+              <p>Owner of Earth-Friendly Goods</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section text-center">
+      <div class="container">
+        <h3>Take the First Step Towards a Sustainable Business</h3>
+        <p>Sign up for our partner program and start making a difference today!</p>
+        <a href="/login" class="btn cta-button mt-3">Join Now</a>
+
+        <div class="contact-details">
+          <p class="mt-4">Have Questions? Contact Us:</p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:partners@ecobuddy.com">partners@ecobuddy.com</a></p>
+          <p><i class="fas fa-phone"></i> +91-6367173271</p>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>

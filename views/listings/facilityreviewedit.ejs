@@ -1,0 +1,109 @@
+<% layout('layout/boilerplate') %>
+  <style>
+    body {
+      background: linear-gradient(135deg, #eef2f3, #8e9eab);
+      font-family: 'Roboto', Arial, sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      color: #444;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .form-label {
+      font-weight: 600;
+      color: #555;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .form-control:focus {
+      border-color: #5cb85c;
+      box-shadow: 0 0 8px rgba(92, 184, 92, 0.5);
+      outline: none;
+      background-color: #fff;
+    }
+
+    textarea.form-control {
+      resize: vertical;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-align: center;
+      color: #fff;
+      background: linear-gradient(135deg, #5cb85c, #4cae4c);
+      border: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: linear-gradient(135deg, #4cae4c, #449d44);
+      transform: translateY(-2px);
+    }
+
+    .btn:focus {
+      outline: none;
+      box-shadow: 0 0 8px rgba(76, 174, 76, 0.5);
+    }
+
+    .mb-3 {
+      margin-bottom: 25px;
+    }
+  </style>
+
+  <div class="container">
+    <h2>Edit Review</h2>
+    <form action="/facilitate/<%= facilityId %>/reviews/<%= review._id %>" method="POST">
+      <div class="mb-3">
+        <label for="rating" class="form-label">Rating (1-5)</label>
+        <input type="number" id="rating" name="rating" class="form-control" min="1" max="5" value="<%= review.rating %>"
+          required>
+      </div>
+      <div class="mb-3">
+        <label for="comment" class="form-label">Comment</label>
+        <textarea id="comment" name="comment" class="form-control" rows="4" required><%= review.comment %></textarea>
+      </div>
+      <button type="submit" class="btn">Update Review</button>
+    </form>
+  </div>

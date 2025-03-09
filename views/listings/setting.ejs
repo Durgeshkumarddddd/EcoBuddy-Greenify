@@ -1,0 +1,159 @@
+<% layout('layout/boilerplate') %>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f3fdf5;
+    }
+
+    .card {
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-title {
+      font-weight: 600;
+    }
+
+    .badge-eco {
+      background-color: #28a745;
+      color: white;
+      border-radius: 12px;
+      padding: 5px 10px;
+      font-size: 0.9rem;
+    }
+
+    .eco-banner {
+      background: linear-gradient(90deg, #28a745, #218838);
+      color: white;
+      padding: 1rem;
+      border-radius: 15px;
+      text-align: center;
+      font-weight: 600;
+    }
+  </style>
+  <div class="container my-5">
+    <div class="eco-banner mb-4">
+      <h1>Welcome to EcoBuddy Settings</h1>
+      <p>Optimize your habits for a greener lifestyle!</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <!-- Profile Settings -->
+      <div class="col-md-6 mb-4">
+        <div class="card p-4">
+          <h5 class="card-title">Profile Settings</h5>
+          <form>
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" id="username" class="form-control" placeholder="Enter your username">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" id="email" class="form-control" placeholder="Enter your email">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" id="password" class="form-control" placeholder="Enter your password">
+            </div>
+            <button type="submit" class="btn btn-success w-100">Save Changes</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Carbon Footprint Tracker -->
+      <div class="col-md-6 mb-4">
+        <div class="card p-4">
+          <h5 class="card-title">Carbon Footprint Tracker</h5>
+          <p>Track and reduce your daily carbon emissions.</p>
+          <div class="d-flex align-items-center justify-content-between">
+            <span>Current Carbon Footprint</span>
+            <span class="badge-eco">12.3 kg CO<sub>2</sub></span>
+          </div>
+          <div class="mt-3">
+            <button class="btn btn-outline-success w-100">Update Tracker</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Energy-Saving Goals -->
+      <div class="col-md-6 mb-4">
+        <div class="card p-4">
+          <h5 class="card-title">Energy-Saving Goals</h5>
+          <p>Set targets to reduce your energy consumption.</p>
+          <form>
+            <div class="mb-3">
+              <label for="energyTarget" class="form-label">Monthly Energy Target (kWh)</label>
+              <input type="number" id="energyTarget" class="form-control" placeholder="Enter your target">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Save Goal</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Water Usage Tracker -->
+      <div class="col-md-6 mb-4">
+        <div class="card p-4">
+          <h5 class="card-title">Water Usage Tracker</h5>
+          <p>Log your daily water usage and conserve water.</p>
+          <form>
+            <div class="mb-3">
+              <label for="waterUsage" class="form-label">Daily Water Usage (liters)</label>
+              <input type="number" id="waterUsage" class="form-control" placeholder="Enter your usage">
+            </div>
+            <button type="submit" class="btn btn-success w-100">Update Usage</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Waste Management Tips -->
+      <div class="col-md-6 mb-4">
+        <div class="card p-4">
+          <h5 class="card-title">Waste Management Tips</h5>
+          <p>Learn simple ways to manage and recycle waste.</p>
+          <ul>
+            <li>Segregate your waste into biodegradable and non-biodegradable.</li>
+            <li>Compost kitchen waste to create organic manure.</li>
+            <li>Avoid using single-use plastics.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Eco-Friendly Product Recommendations -->
+      <div class="col-md-6 mb-4">
+        <div class="card p-4">
+          <h5 class="card-title">Eco-Friendly Products</h5>
+          <p>Discover products that are sustainable and eco-friendly.</p>
+          <ul>
+            <li>Reusable bamboo utensils</li>
+            <li>Solar-powered chargers</li>
+            <li>Eco-friendly cleaning products</li>
+          </ul>
+          <button class="btn btn-success w-100">Shop Now</button>
+        </div>
+      </div>
+
+      <!-- Notification Preferences -->
+      <div class="col-md-6 mb-4">
+        <div class="card p-4">
+          <h5 class="card-title">Notification Preferences</h5>
+          <form>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" id="emailNotif">
+              <label class="form-check-label" for="emailNotif">Email Notifications</label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" id="smsNotif">
+              <label class="form-check-label" for="smsNotif">SMS Notifications</label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" id="greenTips">
+              <label class="form-check-label" for="greenTips">Green Living Tips</label>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Update Preferences</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

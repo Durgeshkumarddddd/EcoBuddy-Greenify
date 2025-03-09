@@ -1,0 +1,124 @@
+<% layout('layout/boilerplate') %>
+  <style>
+    .managemaincontent {
+      background-color: #eafaf1;
+    }
+
+    .text {
+      text-decoration: none;
+      padding: 12px;
+      font-size: 1.1rem;
+    }
+  </style>
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-3 col-lg-2 p-4 bg-light">
+        <h4 class="mb-4 text-center text-primary">Manager Portal</h4>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="text" href="/navigate/manage-users">
+              <i class="bx bxs-user-circle"></i> Manage Users
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="text" href="/navigate/view-reports">
+              <i class="bx bxs-file"></i> View Reports
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="text" href="/navigate/track-projects">
+              <i class="bx bx-trophy"></i> Track Projects
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="text" href="/navigate/settings">
+              <i class="bx bx-cog"></i> Settings
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="col-md-9 col-lg-10 p-5 managemaincontent">
+        <h2 class="text-success mb-4">Welcome to the Manager Portal</h2>
+        <p class="lead text-muted">Use the navigation on the left to manage users, track projects, view reports, and
+          configure settings. Stay up-to-date with Eco Buddy's operations!</p>
+
+        <!-- Quick Stats Section -->
+        <div class="row mb-5">
+          <div class="col-md-4">
+            <div class="card shadow-lg rounded border-light">
+              <div class="card-body">
+                <h5 class="card-title text-primary">Active Users</h5>
+                <p class="card-text text-muted">Manage the users who are currently active on Eco Buddy.</p>
+                <a href="/navigate/manage-users" class="btn btn-primary w-100">Manage</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow-lg rounded border-light">
+              <div class="card-body">
+                <h5 class="card-title text-primary">Ongoing Projects</h5>
+                <p class="card-text text-muted">Track and manage ongoing eco-friendly projects.</p>
+                <a href="/navigate/track-projects" class="btn btn-primary w-100">Track</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow-lg rounded border-light">
+              <div class="card-body">
+                <h5 class="card-title text-primary">Reports</h5>
+                <p class="card-text text-muted">View detailed reports about platform activities and eco-impact.</p>
+                <a href="/navigate/view-reports" class="btn btn-primary w-100">View</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Activities -->
+        <div class="card shadow-lg rounded mb-4">
+          <div class="card-header bg-success text-white">
+            <h5>Recent Activities</h5>
+          </div>
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                New user registration: Nand Kumar Sahu
+                <span class="badge bg-primary rounded-pill">New</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Project "Green City" has been updated.
+                <span class="badge bg-warning rounded-pill">Updated</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Monthly report generated for October.
+                <span class="badge bg-success rounded-pill">Completed</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Upcoming Events -->
+        <div class="card shadow-lg rounded mb-4">
+          <div class="card-header bg-info text-white">
+            <h5>Upcoming Events</h5>
+          </div>
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item">
+                Eco-friendly initiative launch: November 5th
+              </li>
+              <li class="list-group-item">
+                Quarterly project review: November 15th
+              </li>
+              <li class="list-group-item">
+                Virtual meeting with partners: November 20th
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

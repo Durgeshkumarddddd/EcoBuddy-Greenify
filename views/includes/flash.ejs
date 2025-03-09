@@ -1,0 +1,99 @@
+<style>
+  #flash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .alert {
+    width: 450px !important;
+    min-height: 60px;
+    padding: 8px 12px;
+    font-size: 17px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+
+  .alert svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .alert button {
+    padding: 0;
+    background: transparent;
+    border: none;
+    font-size: 17px;
+    opacity: 0.7;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    color: inherit;
+  }
+
+  .alert button:hover {
+    opacity: 1;
+  }
+
+  .alert-success {
+    color: green;
+  }
+
+  .alert-warning {
+    color: red;
+  }
+
+  #lock {
+    color: red !important;
+    vertical-align: middle !important;
+    top: -5px !important;
+    outline: none !important;
+    --bs-btn-close-focus-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0) !important;
+  }
+
+  #lock i {
+    font-size: 1.7rem !important;
+    vertical-align: middle !important;
+  }
+
+  @media (max-width: 576px) {
+    .alert {
+      max-width: 100%;
+      font-size: 13px;
+    }
+  }
+</style>
+
+<div id="flash">
+  <div>
+    <!-- Success Alert -->
+    <% if (success && success.length> 0) { %>
+      <div class="alert alert-success d-flex align-items-center alert-dismissible fade show" role="alert">
+        <!-- Bootstrap Success Icon -->
+        <i class="bi bi-check-circle-fill me-2" style="font-size: 24px;"></i>
+        <span>
+          <%= success %>
+        </span>
+        <button type="button" class="btn-close ms-auto" id="lock" data-bs-dismiss="alert" aria-label="Close"><i
+            class="fa-regular fa-circle-xmark"></i></button>
+      </div>
+      <% } %>
+
+        <!-- Error Alert -->
+        <% if (error && error.length> 0) { %>
+          <div class="alert alert-warning d-flex align-items-center alert-dismissible fade show" role="alert">
+            <!-- Bootstrap Warning Icon -->
+            <i class="bi bi-exclamation-triangle-fill me-2" style="font-size: 24px;"></i>
+            <span>
+              <%= error %>
+            </span>
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <% } %>
+  </div>
+</div>

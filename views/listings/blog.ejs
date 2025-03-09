@@ -1,0 +1,195 @@
+<% layout('layout/boilerplate') %>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eafaf1;
+    }
+
+    .blog-section {
+      padding: 60px 0;
+      background-color: #e6f7f2;
+      text-align: center;
+    }
+
+    .blog-section h2 {
+      font-size: 2.5rem;
+      color: #2d6a4f;
+      margin-bottom: 40px;
+    }
+
+    .blog-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .blog-card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .blog-card .icon {
+      font-size: 3rem;
+      color: #2d6a4f;
+      margin-bottom: 15px;
+      transition: color 0.3s ease;
+    }
+
+    .blog-card h3 {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .blog-card p {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .blog-card:hover .icon {
+      color: #e06c75;
+    }
+
+    .blog-card:nth-child(odd) {
+      background-color: #d8f3dc;
+    }
+
+    .blog-card:nth-child(even) {
+      background-color: #a8dadc;
+    }
+
+    .blog-card:nth-child(3n) {
+      background-color: #ffe156;
+    }
+
+    .blog-card:nth-child(4n) {
+      background-color: #ffad60;
+    }
+
+    /* Hover effect for icons */
+    .blog-card .icon:hover {
+      transform: scale(1.1);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .blog-section {
+        padding: 40px 10px;
+      }
+
+      .blog-cards {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
+    }
+  </style>
+  <section id="blog" class="blog-section">
+    <div class="container">
+      <h2>EcoBuddy Blog</h2>
+      <div class="blog-cards">
+        <div class="blog-card">
+          <div class="icon">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h3>Eco-friendly Tips</h3>
+          <p>Discover eco-friendly practices to reduce waste.</p>
+        </div>
+        <div class="blog-card">
+          <div class="icon">
+            <i class="fas fa-recycle"></i>
+          </div>
+          <h3>Recycling Ideas</h3>
+          <p>Learn creative ways to recycle everyday items.</p>
+        </div>
+        <div class="blog-card">
+          <div class="icon">
+            <i class="fas fa-tree"></i>
+          </div>
+          <h3>Green Living</h3>
+          <p>Tips on how to incorporate green living into your daily routine.</p>
+        </div>
+        <!-- Repeat for other 9 cards -->
+        <div class="blog-card">
+          <div class="icon">
+            <i class="fas fa-water"></i>
+          </div>
+          <h3>Water Conservation</h3>
+          <p>Learn how to save water in your home and garden.</p>
+        </div>
+        <div class="blog-card">
+          <div class="icon">
+            <i class="fas fa-solar-panel"></i>
+          </div>
+          <h3>Solar Energy</h3>
+          <p>Understand the benefits of using solar power.</p>
+        </div>
+        <div class="blog-card">
+          <div class="icon">
+            <i class="fas fa-bicycle"></i>
+          </div>
+          <h3>Sustainable Transport</h3>
+          <p>Eco-friendly transportation options for your daily commute.</p>
+        </div>
+        <div class="blog-card">
+          <div class="icon">
+            <i class="fas fa-globe-americas"></i>
+          </div>
+          <h3>Global Impact</h3>
+          <p>How small actions can make a big difference globally.</p>
+        </div>
+        <div class="blog-card">
+          <div class="icon">
+            <i class="fas fa-thermometer-half"></i>
+          </div>
+          <h3>Climate Change</h3>
+          <p>Understanding the challenges of climate change and its impact.</p>
+        </div>
+        <div class="blog-card">
+          <div class="icon">
+            <i class="fas fa-trash-alt"></i>
+          </div>
+          <h3>Zero Waste</h3>
+          <p>How to reduce waste and make less of an environmental impact.</p>
+        </div>
+        <div class="blog-card">
+          <div class="icon">
+            <i class="fas fa-seedling"></i>
+          </div>
+          <h3>Sustainable Farming</h3>
+          <p>Learn about farming practices that support the environment.</p>
+        </div>
+        <div class="blog-card">
+          <div class="icon">
+            <i class="fas fa-wrench"></i>
+          </div>
+          <h3>Eco-friendly DIY</h3>
+          <p>Easy eco-friendly DIY projects you can start today.</p>
+        </div>
+        <div class="blog-card">
+          <div class="icon">
+            <i class="fas fa-shopping-basket"></i>
+          </div>
+          <h3>Eco-friendly Shopping</h3>
+          <p>How to make sustainable shopping choices.</p>
+        </div>
+      </div>
+    </div>
+  </section>

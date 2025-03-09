@@ -1,0 +1,369 @@
+  /* Preloader Styles */
+  #preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+  /* for rest */
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* NAV SEARCH BOX */
+  .input-group input:focus,
+  .input-group button:hover {
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.6);
+  }
+
+  .input-group input:focus {
+    outline: none;
+  }
+
+  .nav-link:hover {
+    color: #f8f9fa !important;
+    transition: color 0.3s ease;
+  }
+
+  .fullsearch {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .input-group-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #0cc96b;
+  }
+
+  .form-control {
+    border: none;
+    box-shadow: none;
+  }
+
+  .form-control:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(12, 201, 107, 0.25);
+
+  }
+
+  .btn-color {
+    background-color: #0cc96b;
+
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease;
+
+  }
+
+  .btn-color:hover {
+    background-color: #05ff32;
+  }
+
+  .btn-color:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(5, 255, 50, 0.25);
+  }
+
+
+  /*category pannel section */
+  #filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: 0.5rem;
+    gap: 1rem;
+  }
+
+  .filter {
+    text-align: center;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .filter:hover {
+    opacity: 1;
+    cursor: pointer !important;
+    transform: scale(1.1);
+  }
+
+  .filter-icon {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.15rem;
+  }
+
+  .filter p {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #34495e;
+  }
+
+  /* marquee */
+  .marquee-section {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 60px;
+  }
+
+  .marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee-left 15s linear infinite;
+  }
+
+  .marquee.reverse {
+    animation: marquee-right 15s linear infinite;
+  }
+
+  .marquee img {
+    height: 50px;
+    margin: 0 20px;
+    vertical-align: middle;
+  }
+
+  @keyframes marquee-left {
+    from {
+      transform: translateX(100%);
+    }
+
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes marquee-right {
+    from {
+      transform: translateX(-100%);
+    }
+
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  /* Testinomial  */
+
+  .card-body:hover img {
+    transform: scale(1.1);
+  }
+
+  .carousel-inner {
+    transition: opacity 0.5s ease;
+  }
+
+  .carousel-item {
+    animation: fadeIn 1s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+  }
+
+  .carousel-control-prev-icon:hover,
+  .carousel-control-next-icon:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .btn-light {
+    background-color: #ffffff;
+    color: #00796b;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+  }
+
+  .btn-light:hover {
+    background-color: #00796b;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* About Section Hover Effects */
+  .about-img {
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  }
+
+  .about-img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+
+
+
+  /* Hover Effects on Text List */
+  .list-unstyled li {
+    transition: transform 0.3s ease;
+  }
+
+  .list-unstyled li:hover {
+    transform: translateX(10px);
+  }
+
+  /* Button Hover Effect */
+  .btn-success {
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+  }
+
+  .btn-success::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.4s ease;
+  }
+
+  .btn-success:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .btn-success:hover {
+    background-color: #28a745;
+    color: white;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    #about .text-center {
+      text-align: center;
+    }
+  }
+
+  /* for login page */
+
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    background-color: #f4f4f9;
+    position: relative;
+  }
+
+  .form-box {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .form-social-icon {
+    font-size: 22px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .form-social-icon:hover {
+    color: #0073e6;
+  }
+
+  .input-group-text {
+    background-color: #e8f5e9;
+  }
+
+  .input-group-lg .form-control {
+    height: calc(2.25rem + 2px);
+    font-size: 1.1rem;
+  }
+
+  button {
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #388e3c;
+  }
+
+  @media (max-width: 768px) {
+    .form-box {
+      width: 90%;
+      padding: 12px;
+
+    }
+  }
+
+  button:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+  }
+
+  .form-social-icon:hover {
+    color: #0073e6;
+    transform: scale(1.1);
+  }

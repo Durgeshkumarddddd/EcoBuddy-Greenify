@@ -1,0 +1,74 @@
+<% layout('layout/boilerplate') %>
+  <style>
+    .loginpage {
+      background-color: #eafaf1;
+      padding-bottom: 15px;
+      padding-top: 12px;
+    }
+  </style>
+
+  <div class="form-container d-flex justify-content-center align-items-center loginpage">
+    <div class="form-box shadow-lg rounded" data-aos="fade-up" data-aos-delay="200">
+      <div class="text-center mb-4">
+        <img src="https://i.postimg.cc/WbVD3VTV/authentication.png" alt="Authentication" class="img-fluid"
+          style="max-width: 150px;">
+      </div>
+
+      <h1 class="form-title text-center mb-3" data-aos="fade-in" data-aos-delay="500">Welcome to Eco Buddy</h1>
+      <p class="text-center text-muted mb-3" data-aos="fade-in" data-aos-delay="600">
+        Login to access your personalized dashboard, track your eco-friendly contributions, and be part of the green
+        revolution!
+      </p>
+
+      <form method="post" action="/login">
+        <div class="mb-3">
+          <label for="username" class="form-label" data-aos="fade-right" data-aos-delay="700">Username</label>
+          <div class="input-group input-group-lg" data-aos="zoom-in" data-aos-delay="800">
+            <span class="input-group-text"><i class='bx bxs-user-circle'></i></span>
+            <input name="username" type="text" id="username" class="form-control" placeholder="Enter your username">
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label" data-aos="fade-right" data-aos-delay="900">Password</label>
+          <div class="input-group input-group-lg" data-aos="zoom-in" data-aos-delay="1000">
+            <span class="input-group-text"><i class='bx bx-lock'></i></span>
+            <input name="password" type="password" id="password" class="form-control" placeholder="Enter your password">
+          </div>
+        </div>
+
+        <div class="text-end mb-3" data-aos="fade-left" data-aos-delay="1100">
+          <a href="#" class="text-decoration-none">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-success w-100 mb-4 shadow-sm" data-aos="flip-left" data-aos-delay="1200">
+          Login to Eco Buddy
+        </button>
+
+        <div class="text-center">
+          <span>Or login with</span>
+          <div class="mt-3">
+            <a href="#" class="form-social-icon mx-2" data-aos="fade-up" data-aos-delay="1300"><i
+                class='bx bxl-facebook'></i></a>
+            <a href="/authgoogle" class="form-social-icon mx-2" data-aos="fade-up" data-aos-delay="1400"><i
+                class='bx bxl-google'></i></a>
+            <a href="#" class="form-social-icon mx-2" data-aos="fade-up" data-aos-delay="1500"><i
+                class='bx bxl-instagram'></i></a>
+          </div>
+        </div>
+      </form>
+
+      <div class="text-center mt-4">
+        <span>New to Eco Buddy?</span>
+        <a href="/register" class="text-decoration-none text-success">Create an account</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  </script>

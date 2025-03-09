@@ -1,0 +1,72 @@
+<% layout('layout/boilerplate') %>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      
+      h1 {
+        text-align: center;
+      }
+      
+      .table-container {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        overflow-x: auto;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      
+      thead th {
+        position: sticky;
+        top: 0;
+        background-color: #f8f8f8;
+        z-index: 1;
+      }
+      
+      th, td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      
+      tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      
+      tbody tr:hover {
+        background-color: #e9e9e9;
+      }
+</style>
+<body>
+    <div class=" container text-center ">
+        <a href="https://www.globalforestwatch.org/map/?menu=eyJkYXRhc2V0Q2F0ZWdvcnkiOiJmb3Jlc3RDaGFuZ2UiLCJtZW51U2VjdGlvbiI6ImRhdGFzZXRzIn0%3D"> Click here to show map </a>
+ <h1>Carbon Footprint Data</h1>
+ <div class="table-container "> 
+    <table border="1" class="">
+      <thead class="">
+        <tr>
+          <th>Activity</th>
+          <th>Unit</th>
+          <th>Emissions (g CO₂e)</th>
+        </tr>
+      </thead>
+      <tbody class="">
+        <% CarbonAllData.forEach(function(item) { %>
+          <tr>
+            <td><%= item.activity %></td>
+            <td><%= item.unit %></td>
+            <td><%= item.emissions_g_co2e %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+</div>
+</div>
+  </body>

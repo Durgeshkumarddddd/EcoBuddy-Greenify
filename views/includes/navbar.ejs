@@ -1,0 +1,158 @@
+<style>
+  /* General Navbar Styling */
+  .navbar {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Navbar Links Hover Effect */
+  .nav-link:hover {
+    color: #fff;
+    border-bottom: 2px solid #ffc107 !important;
+    transition: border-bottom 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  /* Active Link Styling */
+  .nav-link.active {
+    color: #fff;
+    border-bottom: 2px solid #ffc107 !important;
+  }
+
+  /* Dropdown Menu Styling */
+  .dropdown-menu {
+    border-radius: 8px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .seacrhitemnandku {
+    margin-top: 0px !important;
+  }
+
+  .seacrhitemnandku input {
+    margin-top: 2px !important;
+    ;
+  }
+
+  .seacrhitemnandku .roxy {
+    height: 37px !important;
+  }
+
+  .roxy span,
+  .roxy input,
+  .roxy button {
+    height: 35px !important;
+  }
+
+  .roxy span {
+    display: flex;
+    align-items: center;
+  }
+
+
+  .form-control {
+    font-size: 0.9rem;
+    transition: box-shadow 0.2s ease-in-out;
+  }
+
+  .form-control:focus {
+    box-shadow: 0px 0px 5px rgba(40, 167, 69, 0.5);
+  }
+
+  .btn-success:hover {
+    background-color: #1e7e34;
+    transition: background-color 0.3s ease-in-out;
+  }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm"
+  style="background: linear-gradient(135deg, #28a745, #218838);">
+  <div class="container-fluid">
+    <!-- EcoBuddy Brand Logo -->
+    <a class="navbar-brand fs-2 fw-bold" href="/">ecoBuddy</a>
+
+    <!-- Toggler Button for Smaller Screens -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar Links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link fs-5" aria-current="page" href="/navigate/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5" href="/facilitate">Facilities</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5" href="/product">Products</a>
+        </li>
+      </ul>
+
+      <!-- Dropdown Menu -->
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fs-5" href="#" id="menuDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Menu
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="menuDropdown">
+            <li><a class="dropdown-item" href="/navigate/blog">Blog</a></li>
+            <li><a class="dropdown-item" href="/navigate/FAQ">FAQ</a></li>
+            <li><a class="dropdown-item" href="/navigate/about">About Us</a></li>
+            <li><a class="dropdown-item" href="/navigate/contact">Contact Us</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="/navigate/make-money">Make-money</a></li>
+            <li><a class="dropdown-item" href="/navigate/privacy-policy">privacy-policy</a></li>
+            <li><a class="dropdown-item" href="/navigate/terms-of-service">Terms-of-service</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Search Input -->
+      <div class="fullsearch p-2 shadow-sm">
+        <form class="d-flex seacrhitemnandku" role="search">
+          <div class="input-group roxy">
+            <span class="input-group-text bg-white border-0 rounded-start">
+              <i class="fas fa-search text-success"></i>
+            </span>
+            <input class="form-control border-0 px-3 py-1 bg-white rounded-2" type="search"
+              placeholder="Search ecoFacilities" aria-label="Search">
+            <button class="btn btn-success px-3 py-1 ms-2 rounded-2" type="submit">Search</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- User Actions -->
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link fs-5" href="/facilitatecreate">
+            <i class="fas fa-building"></i> Add Facility
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fs-5" href="#" id="userActionsDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            User Actions
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userActionsDropdown">
+            <li><a class="dropdown-item" href="/login">Login</a></li>
+            <li><a class="dropdown-item" href="/register">Register</a></li>
+            <li><a class="dropdown-item" href="/logout"> Logout </a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="/navigate/manageportal">Manager Portal</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Include Bootstrap and FontAwesome -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>

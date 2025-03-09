@@ -1,0 +1,70 @@
+<% layout('layout/boilerplate') %>
+<style>
+    .card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease-in-out;
+    }
+    .card:hover {
+        transform: scale(1.05);
+    }
+    .card-img-top {
+        height: 200px;
+        object-fit: cover;
+    }
+    .card-body {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .popup {
+        position: fixed;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #28a745;
+        color: #fff;
+        padding: 20px 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        display: none;
+        z-index: 1000;
+        text-align: center;
+    }
+</style>
+<section class="productof">
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">Eco-Friendly Products</h2>
+        <div class="row">
+            <% environmentalProducts.forEach(product => { %>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <img src="<%= product.imageUrl %>" class="card-img-top" alt="<%= product.name %>">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= product.name %></h5>
+                            <p class="card-text"><%= product.description %></p>
+                            <p class="text-success fw-bold">Price: $<%= product.price.toFixed(2) %></p>
+                            <p class="text-warning">Eco Rating: ⭐<%= product.ecoRating %>/5</p>
+                            <p class="text-primary">Stock: <%= product.stock %> available</p>
+                            <p class="text-muted">Category: <%= product.category %></p>
+                            <button class="btn btn-success w-100" onclick="showConfirmation('<%= product.name %>')">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</section>
+<div class="popup" id="confirmationPopup">Thank you for your purchase!</div>
+<script>
+    function showConfirmation(productName) {
+        const popup = document.getElementById('confirmationPopup');
+        popup.innerHTML = `Thank you for purchasing "${productName}"! Your order has been placed successfully.`;
+        popup.style.display = 'block';
+        setTimeout(() => {
+            popup.style.display = 'none';
+        }, 3000);
+    }
+</script>

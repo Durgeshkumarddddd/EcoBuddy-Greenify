@@ -1,0 +1,100 @@
+<% layout('layout/boilerplate') %>
+  <style>
+    :root {
+      --primary-color: #ff3c78;
+      --light-black: rgba(0, 0, 0, 0.89);
+      --black: #000;
+      --white: #fff;
+      --grey: #aaa;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #eafaf1;
+    }
+
+    .contact {
+      margin-top: 45px;
+    }
+
+    .form .form-txt {
+      font-weight: 600;
+      color: var(--light-black);
+    }
+
+    .form .form-txt h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .form .form-txt span {
+      font-size: 14px;
+    }
+
+    .form .form-txt h3 {
+      font-size: 22px;
+      font-weight: 600;
+      margin: 15px 0;
+    }
+
+    .form .form-txt p {
+      font-size: 14px;
+    }
+
+    .form .form-details .form-control {
+      padding: 15px 20px;
+      font-size: 14px;
+      border: 1px solid var(--grey);
+      margin-bottom: 20px;
+    }
+
+    .form .form-details button {
+      padding: 15px 25px;
+      color: var(--white);
+      background: var(--black);
+      font-weight: 500;
+      letter-spacing: 2px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 500px) {
+
+      .form .form-txt,
+      .form .form-details {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+
+  <div class="contact container mt-5">
+    <form>
+      <div class="form d-flex flex-wrap justify-content-between">
+        <div class="form-txt col-lg-5">
+          <h1>Contact Us</h1>
+          <span>We at Eco Buddy are committed to creating a sustainable future by connecting with people who care for
+            the environment.</span>
+          <h3>USA</h3>
+          <p>195 E Parker Square Dr, Parker, CO 801<br>+43 982-314-0958</p>
+          <h3>India</h3>
+          <p>HW95+C9C, Mhada Colony, Viman Nagar, Pune, Maharashtra<br>411014</p>
+        </div>
+        <div class="form-details col-lg-5">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea name="message" id="message" class="form-control" rows="7" placeholder="Your Message"
+              required></textarea>
+          </div>
+          <button type="submit" class="btn btn-dark mb-4">Send Message</button>
+        </div>
+      </div>
+    </form>
+  </div>

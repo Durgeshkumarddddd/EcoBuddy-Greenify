@@ -1,0 +1,199 @@
+<% layout('layout/boilerplate') %>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #eafaf1;
+    }
+
+    .section-title {
+      font-size: 36px;
+      color: #2b5d34;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .subheading {
+      text-align: center;
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .user-table-container {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+    }
+
+    .user-table th,
+    .user-table td {
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .user-status {
+      padding: 6px 15px;
+      border-radius: 20px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .active-status {
+      background-color: #28a745;
+      cursor: pointer;
+    }
+
+    .active-status:hover {
+      background-color: #2ecc71;
+    }
+
+    .inactive-status {
+      background-color: #dc3545;
+    }
+
+    .inactive-status:hover {
+      background-color: #e74c3c;
+      cursor: pointer;
+    }
+
+    .btn-action {
+      background-color: #2b5d34;
+      cursor: pointer;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .btn-action:hover {
+      background-color: #1b703e;
+    }
+
+    .action-icons {
+      font-size: 20px;
+    }
+
+    .action-icons i {
+      margin: 0 10px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .action-icons i:hover {
+      color: #2b5d34;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .user-table-container {
+        padding: 15px;
+      }
+    }
+  </style>
+
+
+  <!-- Active Users Section -->
+  <div class="container mb-5">
+    <h2 class="section-title">Active Users</h2>
+    <p class="subheading">Monitor and manage active users of EcoBuddy platform efficiently.</p>
+
+    <!-- User Table Container -->
+    <div class="user-table-container">
+      <table class="table table-striped table-bordered user-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Last Active</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- User 1 -->
+          <tr>
+            <td>1</td>
+            <td>Nand Kumar Sahu</td>
+            <td>nand@gmail.com</td>
+            <td><span class="user-status active-status">Active</span></td>
+            <td>2 hours ago</td>
+            <td class="action-icons">
+              <i class="bi bi-pencil-fill" title="Edit"></i>
+              <i class="bi bi-trash-fill" title="Delete"></i>
+            </td>
+          </tr>
+
+          <!-- User 2 -->
+          <tr>
+            <td>2</td>
+            <td>Jane Smith</td>
+            <td>janesmith@example.com</td>
+            <td><span class="user-status active-status">Active</span></td>
+            <td>1 day ago</td>
+            <td class="action-icons">
+              <i class="bi bi-pencil-fill" title="Edit"></i>
+              <i class="bi bi-trash-fill" title="Delete"></i>
+            </td>
+          </tr>
+
+          <!-- User 3 -->
+          <tr>
+            <td>3</td>
+            <td>Emily Johnson</td>
+            <td>emilyj@example.com</td>
+            <td><span class="user-status inactive-status">Inactive</span></td>
+            <td>3 days ago</td>
+            <td class="action-icons">
+              <i class="bi bi-pencil-fill" title="Edit"></i>
+              <i class="bi bi-trash-fill" title="Delete"></i>
+            </td>
+          </tr>
+
+          <!-- User 4 -->
+          <tr>
+            <td>4</td>
+            <td>Michael Brown</td>
+            <td>michaelb@example.com</td>
+            <td><span class="user-status active-status">Active</span></td>
+            <td>30 minutes ago</td>
+            <td class="action-icons">
+              <i class="bi bi-pencil-fill" title="Edit"></i>
+              <i class="bi bi-trash-fill" title="Delete"></i>
+            </td>
+          </tr>
+
+          <!-- User 5 -->
+          <tr>
+            <td>5</td>
+            <td>Sophie Williams</td>
+            <td>sophiew@example.com</td>
+            <td><span class="user-status inactive-status">Inactive</span></td>
+            <td>5 days ago</td>
+            <td class="action-icons">
+              <i class="bi bi-pencil-fill" title="Edit"></i>
+              <i class="bi bi-trash-fill" title="Delete"></i>
+            </td>
+          </tr>
+
+          <!-- User 6 -->
+          <tr>
+            <td>6</td>
+            <td>Lucas Harris</td>
+            <td>lucash@example.com</td>
+            <td><span class="user-status active-status">Active</span></td>
+            <td>1 hour ago</td>
+            <td class="action-icons">
+              <i class="bi bi-pencil-fill" title="Edit"></i>
+              <i class="bi bi-trash-fill" title="Delete"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

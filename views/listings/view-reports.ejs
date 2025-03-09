@@ -1,0 +1,214 @@
+<% layout('layout/boilerplate') %>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #eafaf1;
+    }
+
+    .section-title {
+      font-size: 36px;
+      color: #2b5d34;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .subheading {
+      text-align: center;
+      font-size: 18px;
+      color: #555;
+      margin-top: 10px;
+      margin-bottom: 40px;
+    }
+
+    .report-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 0 15px;
+    }
+
+    .report-card {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .report-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .report-header {
+      font-size: 24px;
+      font-weight: bold;
+      color: #1b703e;
+      margin-bottom: 15px;
+    }
+
+    .report-description {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .category-label {
+      background-color: #2b5d34;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 25px;
+      font-size: 14px;
+      margin-bottom: 15px;
+      margin-top: 12px;
+    }
+
+    .category-label:hover {
+      background-color: #1b703e;
+    }
+
+    .btn-view-report {
+      background-color: #2b5d34;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 5px;
+      margin-top: 12px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      width: 100%;
+    }
+
+    .btn-view-report:hover {
+      background-color: #1b703e;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .report-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <!-- Reports Section -->
+  <div class="container mt-5">
+    <h2 class="section-title">Reports</h2>
+    <p class="subheading">Explore detailed reports on platform activities and eco-impact. Stay informed about our
+      sustainability efforts.</p>
+
+    <!-- Report Cards Container -->
+    <div class="report-container">
+      <!-- Report 1 -->
+      <div class="report-card">
+        <div class="report-header">Activity Overview</div>
+        <p class="report-description">A comprehensive summary of platform activities, including user engagement,
+          campaigns, and contributions towards eco-friendly practices.</p>
+        <span class="category-label">Platform Insights</span>
+        <a href="#" class="btn-view-report">View Full Report</a>
+      </div>
+
+      <!-- Report 2 -->
+      <div class="report-card">
+        <div class="report-header">Eco-Impact Summary</div>
+        <p class="report-description">Analyze the eco-impact of various initiatives, including carbon footprint
+          reduction, energy savings, and sustainable practices.</p>
+        <span class="category-label">Environmental Impact</span>
+        <a href="#" class="btn-view-report">View Full Report</a>
+      </div>
+
+      <!-- Report 3 -->
+      <div class="report-card">
+        <div class="report-header">Community Engagement</div>
+        <p class="report-description">Track the participation and feedback from the community, highlighting
+          contributions towards the platform's eco initiatives.</p>
+        <span class="category-label">Community Feedback</span>
+        <a href="#" class="btn-view-report">View Full Report</a>
+      </div>
+
+      <!-- Report 4 -->
+      <div class="report-card">
+        <div class="report-header">Sustainability Trends</div>
+        <p class="report-description">A detailed analysis of sustainability trends within the platform, focusing on
+          resource utilization and green initiatives.</p>
+        <span class="category-label">Sustainability</span>
+        <a href="#" class="btn-view-report">View Full Report</a>
+      </div>
+
+      <!-- Report 5 -->
+      <div class="report-card">
+        <div class="report-header">Energy Conservation</div>
+        <p class="report-description">Track the energy-saving initiatives implemented across the platform,
+          highlighting the reduction in consumption and overall environmental impact.</p>
+        <span class="category-label">Energy Efficiency</span>
+        <a href="#" class="btn-view-report">View Full Report</a>
+      </div>
+
+      <!-- Report 6 -->
+      <div class="report-card">
+        <div class="report-header">Carbon Footprint Analysis</div>
+        <p class="report-description">An in-depth look at the platform's carbon footprint, including measures taken to
+          reduce emissions and offset environmental impact.</p>
+        <span class="category-label">Carbon Reduction</span>
+        <a href="#" class="btn-view-report">View Full Report</a>
+      </div>
+
+      <!-- Report 7 -->
+      <div class="report-card">
+        <div class="report-header">Waste Management</div>
+        <p class="report-description">Review the waste management efforts made by the platform, focusing on recycling
+          initiatives and reducing landfill contributions.</p>
+        <span class="category-label">Waste Reduction</span>
+        <a href="#" class="btn-view-report">View Full Report</a>
+      </div>
+
+      <!-- Report 8 -->
+      <div class="report-card">
+        <div class="report-header">Water Conservation</div>
+        <p class="report-description">Explore the platform's water-saving initiatives and their impact on resource
+          conservation efforts across different communities.</p>
+        <span class="category-label">Water Efficiency</span>
+        <a href="#" class="btn-view-report">View Full Report</a>
+      </div>
+
+      <!-- Report 9 -->
+      <div class="report-card">
+        <div class="report-header">Sustainable Procurement</div>
+        <p class="report-description">An overview of the sustainable procurement practices adopted by the platform,
+          ensuring that eco-friendly products are sourced and used.</p>
+        <span class="category-label">Sustainable Practices</span>
+        <a href="#" class="btn-view-report">View Full Report</a>
+      </div>
+
+      <!-- Report 10 -->
+      <div class="report-card">
+        <div class="report-header">Green Certifications</div>
+        <p class="report-description">Details about the platform's green certifications and environmental
+          recognitions, showcasing the achievements in sustainability.</p>
+        <span class="category-label">Certifications</span>
+        <a href="#" class="btn-view-report">View Full Report</a>
+      </div>
+
+      <!-- Report 11 -->
+      <div class="report-card">
+        <div class="report-header">Sustainability Collaborations</div>
+        <p class="report-description">Explore the collaborative efforts with other organizations and communities to
+          enhance sustainability practices and initiatives.</p>
+        <span class="category-label">Partnerships</span>
+        <a href="#" class="btn-view-report">View Full Report</a>
+      </div>
+
+      <!-- Report 12 -->
+      <div class="report-card">
+        <div class="report-header">Platform Growth & Impact</div>
+        <p class="report-description">A detailed analysis of the platform's growth, user base expansion, and the
+          tangible positive effects it has had on the environment.</p>
+        <span class="category-label">Growth Metrics</span>
+        <a href="#" class="btn-view-report">View Full Report</a>
+      </div>
+    </div>
+  </div>
