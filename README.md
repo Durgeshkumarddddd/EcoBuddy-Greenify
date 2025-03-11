@@ -173,8 +173,8 @@ Follow these steps:
 ## **👨‍💻 Developer & Contact**  
 
 💬 **Questions? Need support?**  
-📧 Email: [contact on email](mailto:your.shivanandvansal9520@gmail.com)  
-🔗 LinkedIn: [My Profile](www.linkedin.com/in/nandkumarsahu1234)  
+📧 Email: [contact on email](mailto:your.durgeshkumarddddd1234@gmail.com)  
+🔗 LinkedIn: [My Profile](www.linkedin.com/in/durgeshkumar)  
 
 🌟 _Let’s make the world greener, one click at a time!_ 🌍💚  
 
