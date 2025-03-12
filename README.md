@@ -102,7 +102,7 @@ EcoBuddy/
 
 ### **1️⃣ Clone the Repository**  
 ```bash
-git clone https://github.com/NandKumarSahu/EcoBuddy.git
+git clone https://github.com/Durgeshkumarddddd/EcoBuddy.git
 ```
 
 ### **2️⃣ Navigate to the Project Directory**  
