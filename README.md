@@ -29,7 +29,26 @@ As the world shifts toward sustainability, finding and utilizing eco-friendly re
 - 🌱 **Community Gardens** – Join urban gardening initiatives and contribute to green spaces.  
 - 🏀 **Eco-Friendly Sports Complexes** – Stay fit while reducing environmental impact.  
 - 🐾 **Wildlife Parks & Green Zones** – Locate nature reserves and biodiversity hotspots.  
-- 🏛 **Event Venues** – Reserve sustainable halls and eco-conscious event spaces.  
+- 🏛 **Event Venues** – Reserve sustainable halls and eco-conscious event spaces.
+- 
+-  **🧮 Carbon Footprint Analyzer**  
+  Scan products or log daily activities to calculate their environmental impact in real-time.
+
+- **♻️ Eco Suggestions & Alternatives**  
+  Get AI-powered recommendations for greener alternatives—whether it's a product, brand, or habit.
+
+- **🔍 Harmful Activity Detection**  
+  Automatically identifies user behaviors or products that negatively affect the environment and suggests improvements.
+
+- **🛍️ Green Product Marketplace**  
+  Discover eco-friendly products and subscribe to services that support sustainability.
+
+- **👥 Community & Motivation Hub**  
+  Join a like-minded community, track achievements, earn eco-points, and get motivated through real-world challenges.
+
+- **🤝 Corporate Collaborations**  
+  Partnered with major companies like **Tata Power Solar**, **BigBasket**, and **ReNew Power** to bring real impact through products, insights, and incentives.
+
 
 ### **⚡ Smart & Secure Platform**  
 - 🔐 **Google OAuth 2.0 Authentication** – Hassle-free, secure login.  
