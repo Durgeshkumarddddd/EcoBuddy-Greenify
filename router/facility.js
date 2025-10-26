@@ -14,7 +14,9 @@ router.get('/carbondata', async(req, res)=>{
 // faciliateshow route
 router.get("/facilitate", async (req, res) => {
   try {
+    console.log("Fetching facilities for /facilitate route");
     const facilities = await dataconnect.find();
+    console.log(facilities);
     const reviews = await Review.find();
     res.render("listings/facilityshow.ejs", { facilities, reviews });
   } catch (error) {
@@ -78,7 +80,7 @@ router.post('/facilitate/update/:id', async (req, res) => {
     const {
       Facillity_Title,
       Facillity_Description,
-      Facillity_Category,
+      Facillity_Category, 
       Facillity_Adderess,
       Facillity_Status,
       Facillity_Image,

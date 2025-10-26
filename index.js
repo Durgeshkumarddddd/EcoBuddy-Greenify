@@ -1,10 +1,11 @@
+if (process.env.NODE_ENV != "production") {
+  require("dotenv").config();
+}
+
 const express = require('express');
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 8080;
 
-
-// Passport Configuration
-require('dotenv').config();
 // Database connection
 const connectionDatbase = require("./config/mongoose");
 
@@ -12,21 +13,22 @@ const connectionDatbase = require("./config/mongoose");
 const listingsRouter = require('./router/facility.js');
 const ReviewRouter = require('./router/review.js');
 const navigateRoute = require('./router/navigateRoute.js');
-<<<<<<< HEAD
-// for porduct 
+
+// for product 
 const productRouter = require('./router/product.js');
-=======
->>>>>>> d1dec281589ea32a1fe41c6690266effce41e6ac
 const userRouter = require('./router/user.js');
 const passportLocalMongoose = require('passport-local-mongoose');
 const passport = require('passport');
 const methodOverride = require('method-override');
 // Path & Models
+
 const path = require('path');
 const dataconnect = require("./model/Facillites");
 const Review = require('./model/Feedback');
 const User = require('./model/users'); // Fixed Missing User Model Import
 const LocalStrategy = require("passport-local");
+const MongoStore = require('connect-mongo');
+
 // Cookie Parser Middleware
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
@@ -46,7 +48,21 @@ app.engine("ejs", ejsMate);
 // Session & Flash
 const session = require("express-session");
 const flash = require("connect-flash");
+
+// To store data in Atlas database
+let dbStore = MongoStore.create({
+  mongoUrl: process.env.ATLASDB_URL,
+  touchAfter: 24 * 3600, // time period in seconds to update session when any change in server
+  crypto: {
+    secret: 'Mysecret'
+  }
+})
+dbStore.on("error", (error) => { console.log("Error in mongo Session store", error); });
+
+
+// Session middleware
 app.use(session({
+  store: dbStore,
   secret: 'secretKeyword',
   resave: false,
   saveUninitialized: true,
@@ -76,13 +92,14 @@ app.use((req, res, next) => {
   next();
 });
 
+
+
 // Routers
 app.use('/', listingsRouter);
 app.use('/', ReviewRouter);
-<<<<<<< HEAD
+
 app.use('/', productRouter); // Added Product Router
-=======
->>>>>>> d1dec281589ea32a1fe41c6690266effce41e6ac
+
 app.use('/', userRouter);
 app.use('/navigate', navigateRoute);
 
