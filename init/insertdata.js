@@ -9,7 +9,7 @@ const CarbonPrintModel = require('../model/carbonFootPrint.js');
 const CardModel = require('../model/Card.js');
 
 const initialdata = require('./data.js');
-const seconddata = require('./DATA2.jS');
+const seconddata = require('./SecondData.js');
 const CarbonPrintDb = require('./CarbonFootPrint.js');
 const CardData = require('./CardDb.js');
 

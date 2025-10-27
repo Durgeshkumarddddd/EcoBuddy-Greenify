@@ -5,6 +5,10 @@ const dataconnect = require("../model/Facillites");
 const Review = require('../model/Feedback')
 const CarbonModel = require('../model/carbonFootPrint');
 
+const multer = require("multer");
+const { storage } = require("../cloudConfig");  // Make sure this path is correct
+const upload = multer({ storage });
+
 // Data from CarbonFoot print Data
 router.get('/carbondata', async(req, res)=>{
   const CarbonAllData = await CarbonModel.find({});
@@ -14,9 +18,8 @@ router.get('/carbondata', async(req, res)=>{
 // faciliateshow route
 router.get("/facilitate", async (req, res) => {
   try {
-    console.log("Fetching facilities for /facilitate route");
     const facilities = await dataconnect.find();
-    console.log(facilities);
+   
     const reviews = await Review.find();
     res.render("listings/facilityshow.ejs", { facilities, reviews });
   } catch (error) {
@@ -31,17 +34,28 @@ router.get("/facilitatecreate", (req, res) => {
 });
 
 // for create data
-router.post("/facilitatecreate", async (req, res) => {
+router.post("/facilitatecreate", upload.single("facility[Facillity_Image]"), async (req, res) => {
   try {
-    let newfacility = await new dataconnect(req.body.facility)
-    await newfacility.save();
-    req.flash("success", "you added new item")
-    res.redirect("/facilitate")
+    // Get all form fields
+    const facilityData = req.body.facility;
+
+    // Add Cloudinary image URL to data
+    if (req.file) {
+      facilityData.Facillity_Image = req.file.path; // Cloudinary image URL
+    }
+
+    // Save to MongoDB
+    const newFacility = new dataconnect(facilityData);
+    await newFacility.save();
+
+    req.flash("success", "✅ New facility added successfully!");
+    res.redirect("/facilitate");
   } catch (error) {
-    console.error("Error fetching facilities:", error);
+    console.error("❌ Error adding facility:", error);
     res.status(500).render("listings/error.ejs");
   }
 });
+
 // Route to show specific facility details with reviews
 router.get("/facilitate/:id", async (req, res) => {
   try {

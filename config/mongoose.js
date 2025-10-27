@@ -1,21 +1,11 @@
-
-
 const mongoose = require("mongoose");
-// For store data in Atlas database
-let dburl = process.env.ATLASDB_URL;
-// mongoose.connect('mongodb://localhost:27017/ecobuddy')
-async function main() {
-  await mongoose.connect(dburl);
+const dotenv = require("dotenv");
+dotenv.config();
 
-  // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
-}
-const db = mongoose.connection
+const dburl = process.env.ATLASDB_URL; // load Atlas URL from .env
 
-db.on('err', err => {
-  console.log(err)
-});
-db.on("open", () => {
-  console.log("connected to database");
-});
+mongoose.connect(dburl)
+  .then(() => console.log("✅ Connected to MongoDB Atlas (App)"))
+  .catch(err => console.error("❌ MongoDB connection error:", err));
 
-module.exports = db;
+module.exports = mongoose.connection;

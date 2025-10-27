@@ -7,7 +7,7 @@
           <h3>Add Facility</h3>
         </div>
         <div class="card-body">
-          <form method="post" action="/facilitatecreate" >  <!-- enctype="multipart/form-data"  --- IGNORE --->
+          <form method="post" action="/facilitatecreate" enctype="multipart/form-data" >  <!-- enctype="multipart/form-data"  --- IGNORE --->
             <div class="mb-3">
               <label for="FacillityTitle" class="form-label">Facility Title</label>
               <input type="text" name="facility[Facillity_Title]" class="form-control" id="FacillityTitle"
@@ -64,9 +64,9 @@
               <label for="FacillityImage" class="form-label">Facility Image</label>
               <!-- <input type="file" name="facility[FacillityImage]" class="form-control" id="FacillityImage"
                 accept="image/*"  /> -->
-              <input name="facility[Facillity_Image]" type="text" class="form-control" placeholder="Enter Image url "
-                required>
-                  <!-- <input name="facility[Facillity_Image]" type="file" class="form-control" placeholder="Enter Image url " required> -->
+              <!-- <input name="facility[Facillity_Image]" type="text" class="form-control" placeholder="Enter Image url "
+                required> -->
+                  <input name="facility[Facillity_Image]" type="file" class="form-control" placeholder="Enter/Choose Image " required>
             </div>
 
             <div class="d-grid">
